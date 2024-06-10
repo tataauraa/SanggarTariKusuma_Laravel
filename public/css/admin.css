@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f3f4f6;
+}
+
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #2b595b;
+    padding-top: 60px;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.sidebar.active {
+    width: 70px;
+}
+
+.logo-details {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: 700;
+    padding: 10px 0;
+    cursor: pointer;
+}
+
+.nav-links {
+    padding: 20px 0;
+}
+
+.nav-links li {
+    list-style: none;
+    margin-bottom: 10px;
+}
+
+.nav-links a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+    background-color: #555;
+}
+
+.links_name {
+    transition: all 0.3s ease;
+    margin-left: 10px;
+}
+
+.sidebar.active .links_name {
+    display: none;
+}
+
+.sidebar-button {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 1100;
+}
+
+.sidebar-button:hover {
+    background-color: #555;
+}
+
+/* Main Content */
+.home-section {
+    margin-left: 250px;
+    padding: 20px;
+    transition: all 0.3s ease;
+}
+
+.home-content {
+    margin-top: 20px;
+}
+
+.admin_name {
+    font-weight: bold;
+    color: #333;
+}
+
+/* Icon Styles */
+.bx {
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .sidebar.active {
+        width: 100px;
+    }
+
+    .sidebar.active .links_name {
+        display: none;
+    }
+
+    .home-section {
+        margin-left: 100px;
+    }
+}
